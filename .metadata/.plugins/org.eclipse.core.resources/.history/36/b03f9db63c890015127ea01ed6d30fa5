@@ -1,0 +1,25 @@
+package com.vince;
+
+import java.io.IOException;
+import java.net.ServerSocket;
+
+public class EchoServerDemo {
+
+	/**
+	 * 服务器端的代码
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		// 参数是端口号1024~65535
+		try {
+			//端口是否可用
+			ServerSocket socket = new ServerSocket(8000);
+		} catch (IOException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+	}
+
+}

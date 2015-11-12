@@ -1,0 +1,12 @@
+package com.vince;
+
+public class MoreServerDemo {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+
+	}
+
+}

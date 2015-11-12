@@ -1,0 +1,48 @@
+package com.vince;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.PrintStream;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class EchoClientDemo {
+
+	/**
+	 * 客户端
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		// 连接服务器
+		try {
+			// 端口号的异常
+			Socket socket = new Socket("localhost", 8000);
+			System.out.println("客户端连接成功");
+			OutputStream outputStream = socket.getOutputStream();
+			InputStream inputStream = socket.getInputStream();
+			// 进行写
+			PrintStream printStream = new PrintStream(outputStream);
+			// 进行写入方便读入，先写后读
+			printStream.println("hello server I am client");
+			BufferedReader reader = new BufferedReader(new InputStreamReader(
+					inputStream));
+			String info = reader.readLine();
+			// 读取服务端的
+			System.out.println("客户端:" + info);
+			inputStream.close();
+			outputStream.close();
+		} catch (UnknownHostException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+	}
+
+}

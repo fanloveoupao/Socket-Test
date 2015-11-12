@@ -1,0 +1,29 @@
+package com.vince;
+
+import java.io.IOException;
+import java.net.Socket;
+import java.net.UnknownHostException;
+
+public class EchoClientDemo {
+
+	/**
+	 * 客户端
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+		// 连接服务器
+		try {
+			//端口号的异常
+			Socket socket = new Socket("localhost", 8000);
+		} catch (UnknownHostException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		} catch (IOException e) {
+			// TODO 自动生成的 catch 块
+			e.printStackTrace();
+		}
+	}
+
+}

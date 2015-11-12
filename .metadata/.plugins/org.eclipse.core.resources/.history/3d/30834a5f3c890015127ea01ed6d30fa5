@@ -1,0 +1,15 @@
+package com.vince;
+
+public class EchoServerDemo {
+
+	/**
+	 * 服务器端的代码
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO 自动生成的方法存根
+
+	}
+
+}
